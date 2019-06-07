@@ -1,0 +1,16 @@
+<html>
+  <script src="js/app.js"></script>
+  <title>gnavi検索</title>
+  <body>
+    <form name='mainform' method = 'GET'>
+      店の名前
+      <input type = 'text', id = 'freeword'>
+      <input type = 'button', value = '検索' onclick="gnaviFreewordSearch(offset=1, hit_per_page=20);">
+    </form>
+  <div id = 'shopinfo'></div>
+  <a href = "#" onclick="gnaviFreewordSearch(offset+=hit_per_page, hit_per_page);">次の結果</a>
+  </body>
+  <footer>
+    Supported by <a href="https://api.gnavi.co.jp/api/scope/" target="_blank">ぐるなびWebService</a>
+  </footer>
+</html>
