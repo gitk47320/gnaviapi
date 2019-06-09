@@ -1,5 +1,6 @@
 <html>
   <script src="js/app.js"></script>
+  <link rel = 'stylesheet' type='text/css' href="css/style.css">
   <title>gnavi検索</title>
   <body>
     <form name='mainform' method = 'GET'>
@@ -7,7 +8,18 @@
       <input type = 'text', id = 'freeword'>
       <input type = 'button', value = '検索' onclick="gnaviFreewordSearch(offset=1, hit_per_page=20);">
     </form>
-  <div id = 'shopinfo'></div>
+  <div id = 'shops'>
+    <div id = 'shopinfo0'></div>
+    <div id = 'shopinfo1'></div>
+    <div id = 'shopinfo2'></div>
+    <div id = 'shopinfo3'></div>
+    <div id = 'shopinfo4'></div>
+    <div id = 'shopinfo5'></div>
+    <div id = 'shopinfo6'></div>
+    <div id = 'shopinfo7'></div>
+    <div id = 'shopinfo8'></div>
+    <div id = 'shopinfo9'></div>
+  </div>
   <a href = "#" onclick="gnaviFreewordSearch(offset+=hit_per_page, hit_per_page);">次の結果</a>
   </body>
   <footer>

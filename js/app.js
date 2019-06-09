@@ -9,30 +9,11 @@ function gnaviFreewordSearch(offset, hit_per_page){
   
   req.open('GET', url, true)
 
-  var shopname  =[]
-  var shopaddress = []
   req.onload = function(){
-    document.getElementById("shopinfo").innerHTML = '<table id = "shopinfotable", border = 1></table>'
-    var table = document.getElementById("shopinfo").childNodes[0];
-    var row = table.insertRow(-1)
-    var nametr = row.insertCell(-1);
-    var addresstr = row.insertCell(-1);
-    nametr.innerHTML = '<tr><th>店の名前</th></tr>'
-    addresstr.innerHTML = '<tr><th>店の住所</th></tr>'
-    apiresult = req.response;
-    for(i = 0; i < hit_per_page ;i++){
-      shopname[i] = apiresult.rest[i].name;
-      shopaddress[i] = apiresult.rest[i].address
-      var row = table.insertRow(-1)
-      var namecell = row.insertCell(-1);
-      var addresscell = row.insertCell(-1);
-      namecell.innerHTML = shopname[i];
-      addresscell.innerHTML = shopaddress[i];
+    for(i = 0; i < hit_per_page; i++){
+    document.getElementById("shops").childNodes[i].innerHTML 
+    = `<a href = ${req.response.rest[i].url}><img src = ${req.response.rest[i].image_url.shop_image1}><br>${req.response.rest[i].name}</a><br>`
     }
   };
   req.send();
-}
-
-function freewordValidation(){
-
 }
