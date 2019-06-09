@@ -1,6 +1,6 @@
 function gnaviFreewordSearch(offset, hit_per_page){
   var req = new XMLHttpRequest();
-  keyid = '71926b2013dd9d0d36651401e85520a4'
+  //keyid = github公開のため隠匿;
   var freeword = document.forms.mainform.elements['freeword'].value
   var pref = document.forms.mainform.elements['pref'].value
   url = `https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=71926b2013dd9d0d36651401e85520a4&pref=${pref}&freeword=${freeword}&offset=${offset}&hit_per_page=${hit_per_page}`
